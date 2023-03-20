@@ -11,7 +11,7 @@ import os
 import numpy as np
 
 #--STEP 2--#
-Entrez.email = 'jspates@luc.edu'
+Entrez.email = ''
 # Retrieve the GenBank record
 handle = Entrez.efetch(db='nucleotide', id='NC_006273.2', rettype='gb', retmode='text')
 hcmv_record = handle.read()
@@ -71,7 +71,7 @@ def calculate_tpm_stats(sample_dir):
     
 #--STEP 5--#    
 # Creation of Blast DB   
-Entrez.email = "jspates@luc.edu"
+Entrez.email = ''
 # Search for nucleotide sequences in the Betaherpesvirinae subfamily
 handle = Entrez.esearch(db="nucleotide", term="Betaherpesvirinae[subtree]", retmax=100000)
 record = Entrez.read(handle)
