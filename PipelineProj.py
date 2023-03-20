@@ -48,7 +48,7 @@ sample_files = {'sample1': ('SRX2896360_1.fastq', 'SRX2896360_2.fastq'),
 for sample, (fastq1, fastq2) in sample_files.items():
     output_dir = f'{sample}_output'
     os.makedirs(output_dir, exist_ok=True)
-    cmd = f'kallisto quant -i {transcriptome_index} -o {output_dir} -b 100 {fastq1} {fastq2}'
+    cmd = f'kallisto quant -i {transcriptome_index} -o {output_dir} -b 10 {fastq1} {fastq2}'
     os.system(cmd)  
 # Define the paths to each sample's output directory
 sample_dirs = ['sample1_output', 'sample2_output', 'sample3_output', 'sample4_output']
